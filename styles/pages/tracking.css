@@ -18,6 +18,7 @@
   margin-bottom: 30px;
 }
 
+
 .delivery-date {
   font-size: 25px;
   font-weight: 700;
@@ -62,6 +63,16 @@
   .progress-label {
     margin-bottom: 3px;
   }
+}
+
+.search-button {
+  background-color: rgb(105, 254, 179);
+  border: none;
+  width: 45px;
+  height: 40px;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+  flex-shrink: 0;
 }
 
 .progress-bar-container {

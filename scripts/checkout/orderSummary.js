@@ -11,34 +11,35 @@ export function renderOrderSummary() {
 
   cart.forEach((cartItem) => {
     const productId = cartItem.productId;
-
     const matchingProduct = getProduct(productId);
-
+  
+    if (!matchingProduct) {
+      console.error(`Could not render cart item: Product with ID ${productId} not found.`);
+      return;  // Skip this iteration if product isn't found
+    }
+  
     const deliveryOptionId = cartItem.deliveryOptionId;
-
     const deliveryOption = getDeliveryOption(deliveryOptionId);
-
+  
     const today = dayjs();
     const deliveryDate = today.add(
       deliveryOption.deliveryDays,
       'days'
     );
-    const dateString = deliveryDate.format(
-      'dddd, MMMM D'
-    );
-
+    const dateString = deliveryDate.format('dddd, MMMM D');
+  
     cartSummaryHTML += `
-      <div class="cart-item-container 
+      <div class="cart-item-container
         js-cart-item-container
         js-cart-item-container-${matchingProduct.id}">
         <div class="delivery-date">
           Delivery date: ${dateString}
         </div>
-
+  
         <div class="cart-item-details-grid">
           <img class="product-image"
             src="${matchingProduct.image}">
-
+  
           <div class="cart-item-details">
             <div class="product-name">
               ${matchingProduct.name}
@@ -54,14 +55,14 @@ export function renderOrderSummary() {
               <span class="update-quantity-link link-primary">
                 Update
               </span>
-              <span class="delete-quantity-link link-primary js-delete-link 
-                js-delete-link-${matchingProduct.id}" 
+              <span class="delete-quantity-link link-primary js-delete-link
+                js-delete-link-${matchingProduct.id}"
                 data-product-id="${matchingProduct.id}">
                 Delete
               </span>
             </div>
           </div>
-
+  
           <div class="delivery-options">
             <div class="delivery-options-title">
               Choose a delivery option:
@@ -72,9 +73,10 @@ export function renderOrderSummary() {
       </div>
     `;
   });
+  
 
   function deliveryOptionsHTML(matchingProduct, cartItem) {
-    let html  = '';
+    let html = '';
 
     deliveryOptions.forEach((deliveryOption) => {
       const today = dayjs();
@@ -92,7 +94,7 @@ export function renderOrderSummary() {
 
       const isChecked = deliveryOption.id === cartItem.deliveryOptionId;
 
-      html +=`
+      html += `
         <div class="delivery-option js-delivery-option"
           data-product-id="${matchingProduct.id}"
           data-delivery-option-id="${deliveryOption.id}">
@@ -122,12 +124,12 @@ export function renderOrderSummary() {
     .forEach((link) => {
       link.addEventListener('click', () => {
         const productId = link.dataset.productId;
-        removeFromCart(productId); 
+        removeFromCart(productId);
 
         const container = document.querySelector(
           `.js-cart-item-container-${productId}`
         );
-        container.remove()
+        container.remove();
 
         renderPaymentSummary();
       });
@@ -136,7 +138,7 @@ export function renderOrderSummary() {
   document.querySelectorAll('.js-delivery-option')
     .forEach((element) => {
       element.addEventListener('click', () => {
-        const {productId, deliveryOptionId} = element.dataset; 
+        const {productId, deliveryOptionId} = element.dataset;
         updateDeliveryOption(productId, deliveryOptionId);
         renderOrderSummary();
         renderPaymentSummary();

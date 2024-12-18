@@ -109,6 +109,29 @@
   margin-bottom: 8px;
 }
 
+.delivery-option-date {
+  color: rgb(63, 0, 118);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.delivery-date {
+  color: rgb(63, 0, 118);
+  font-weight: 700;
+  font-size: 19px;
+  margin-top: 5px;
+  margin-bottom: 22px;
+}
+
+.button-primary {
+  color: rgb(33, 33, 33);
+  background-color: rgb(20, 188, 255);
+  border: 1px solid rgb(20, 188, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
+}
+
 .product-price {
   color: rgb(177, 39, 4);
   font-weight: 700;
