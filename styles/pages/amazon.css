@@ -71,8 +71,13 @@
   padding-left: 25px;
   padding-right: 25px;
 
+<<<<<<< HEAD
   border-right: 1px solid rgb(23, 16, 228);
   border-bottom: 1px solid rgb(23, 16, 228);
+=======
+  border-right: 1px solid rgb(231, 231, 231);
+  border-bottom: 1px solid rgb(231, 231, 231);
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 
   display: flex;
   flex-direction: column;
@@ -122,6 +127,7 @@
   margin-bottom: 10px;
 }
 
+<<<<<<< HEAD
 .amazon-header {
   background-color: rgb(19, 25, 33);
   color: white;
@@ -143,6 +149,8 @@ border: 1px solid rgb(20, 208, 255);
   flex-shrink: 0;
 }
 
+=======
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 .product-quantity-container {
   margin-bottom: 17px;
 }

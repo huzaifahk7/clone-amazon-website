@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 import { cart } from '../../data/cart.js';
 import { getDeliveryOption } from '../../data/deliveryOptions.js';
 import { addOrder } from '../../data/orders.js';
 import { getProduct } from '../../data/products.js';
 import { formatCurrency } from '../utils/money.js';
+=======
+import {cart} from '../../data/cart.js';
+import {getProduct} from '../../data/products.js';
+import {getDeliveryOption} from '../../data/deliveryOptions.js';
+import {formatCurrency} from '../utils/money.js';
+import {addOrder} from '../../data/orders.js';
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 
 export function renderPaymentSummary() {
   let productPriceCents = 0;

@@ -18,7 +18,10 @@
   margin-bottom: 30px;
 }
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 .delivery-date {
   font-size: 25px;
   font-weight: 700;
@@ -65,6 +68,7 @@
   }
 }
 
+<<<<<<< HEAD
 .search-button {
   background-color: rgb(105, 254, 179);
   border: none;
@@ -75,6 +79,8 @@
   flex-shrink: 0;
 }
 
+=======
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 .progress-bar-container {
   height: 25px;
   width: 100%;

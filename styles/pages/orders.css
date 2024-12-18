@@ -19,6 +19,7 @@
   margin-bottom: 25px;
 }
 
+<<<<<<< HEAD
 .button-primary {
   color: rgb(33, 33, 33);
   background-color: rgb(255, 20, 212);
@@ -38,6 +39,8 @@
   flex-shrink: 0;
 }
 
+=======
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 .orders-grid {
   display: grid;
   grid-template-columns: 1fr;

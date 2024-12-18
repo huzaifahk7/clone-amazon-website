@@ -109,6 +109,7 @@
   margin-bottom: 8px;
 }
 
+<<<<<<< HEAD
 .delivery-option-date {
   color: rgb(63, 0, 118);
   font-weight: 500;
@@ -132,6 +133,8 @@
   box-shadow: 0 2px 5px rgba(213, 217, 217, 0.5);
 }
 
+=======
+>>>>>>> 11ee6c57f2214f1d8b3a161bbb6665155f244d0c
 .product-price {
   color: rgb(177, 39, 4);
   font-weight: 700;
